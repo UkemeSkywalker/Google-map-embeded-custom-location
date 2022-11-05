@@ -13,15 +13,19 @@ function initMap(): void {
   const map = new google.maps.Map(
     document.getElementById("map") as HTMLElement,
     {
-      zoom: 11,
-      center: { lat: 62.323907, lng: -150.109291 },
-      mapTypeId: "satellite",
+      zoom: 10,
+      center: { lat: 6.5244, lng: 3.3792 },
+      // mapTypeId: "satellite",
+      mapTypeControlOptions: {
+        mapTypeIds: ["roadMap", "satellite"] 
+      }
     }
+
   );
 
   const bounds = new google.maps.LatLngBounds(
-    new google.maps.LatLng(62.281819, -150.287132),
-    new google.maps.LatLng(62.400471, -150.005608)
+    new google.maps.LatLng(6.3244, 3.1792),
+    new google.maps.LatLng(6.7244, 3.5792)
   );
 
   // The photograph is courtesy of the U.S. Geological Survey.
@@ -75,7 +79,7 @@ function initMap(): void {
       // coordinates of the overlay to peg it to the correct position and size.
       // To do this, we need to retrieve the projection from the overlay.
       const overlayProjection = this.getProjection();
-
+      // console.log("line 82",this.getProjection())
       // Retrieve the south-west and north-east coordinates of this overlay
       // in LatLngs and convert them to pixel coordinates.
       // We'll use these coordinates to resize the div.
