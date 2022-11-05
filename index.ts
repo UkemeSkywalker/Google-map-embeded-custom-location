@@ -13,8 +13,8 @@ function initMap(): void {
   const map = new google.maps.Map(
     document.getElementById("map") as HTMLElement,
     {
-      zoom: 10,
-      center: { lat: 6.5244, lng: 3.3792 },
+      zoom: 14,
+      center: { lat: 6.5095, lng: 3.3711 },
       // mapTypeId: "satellite",
       mapTypeControlOptions: {
         mapTypeIds: ["roadMap", "satellite"] 
@@ -29,9 +29,11 @@ function initMap(): void {
   );
 
   // The photograph is courtesy of the U.S. Geological Survey.
-  let image = "https://drive.google.com/file/d/17S8GKEvx9siBm8vV-GDTX5muLqnBrvMm/view?usp=share_link";
+  // let image = "https://developers.google.com/maps/documentation/javascript/";
 
   // image += "examples/full/images/talkeetna.png";
+
+  let image = "./images/FloorPlan2.png";
 
   /**
    * The custom USGSOverlay object contains the USGS image,
@@ -63,8 +65,8 @@ function initMap(): void {
       const img = document.createElement("img");
 
       img.src = this.image;
-      img.style.width = "100%";
-      img.style.height = "100%";
+      img.style.width = "30%";
+      img.style.height = "30%";
       img.style.position = "absolute";
       this.div.appendChild(img);
 
