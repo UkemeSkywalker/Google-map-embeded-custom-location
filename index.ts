@@ -29,9 +29,9 @@ function initMap(): void {
   );
 
   // The photograph is courtesy of the U.S. Geological Survey.
-  let image = "https://developers.google.com/maps/documentation/javascript/";
+  let image = "https://drive.google.com/file/d/17S8GKEvx9siBm8vV-GDTX5muLqnBrvMm/view?usp=share_link";
 
-  image += "examples/full/images/talkeetna.png";
+  // image += "examples/full/images/talkeetna.png";
 
   /**
    * The custom USGSOverlay object contains the USGS image,
